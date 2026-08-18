@@ -74,6 +74,7 @@ int main(int argc, char* argv[]) {
             case '/':
                 if (numberTwo == 0) {
                     std::cout << "Division by zero unable to do that" << std::endl;
+                    errorSkipped = true;
                 }else {
                     result = numberOne / numberTwo;
                 }
