@@ -84,7 +84,7 @@ int main(int argc, char* argv[]) {
                 break;
         }
 
-        if (errorSkipped == true)  {
+        if (errorSkipped == false)  {
             std::cout << result << std::endl;
         }
 
