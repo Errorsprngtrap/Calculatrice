@@ -1,4 +1,12 @@
 #include <iostream>
+#include <algorithm>
+char operatorList[4] = {
+    '+',
+    '-',
+    '/',
+    '*'
+};
+
 
 double forceAnswer() {
     bool goodAnswer = false;
@@ -11,7 +19,14 @@ double forceAnswer() {
             std::cin.clear();
             std::cin.ignore();
         }else {
-            goodAnswer = true;
+            if (std::find(std::begin(operatorList), std::end(operatorList), answer) != std::end(operatorList)) {
+                goodAnswer = true;
+            } else {
+                std::cout << "Invalid answer" << std::endl;
+                std::cin.clear();
+                std::cin.ignore();
+            }
+
         }
     }
 
