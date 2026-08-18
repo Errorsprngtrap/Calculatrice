@@ -1,6 +1,41 @@
 #include <iostream>
 
-int main() {
+int main(int argc, char* argv[]) {
+    float numberOne;
+    float numberTwo;
+    char operatorSign;
+
+    std::cout << "Please enter a number" << std::endl;
+    std::cin >> numberOne;
+
+    std::cout << "Please enter an operator" << std::endl;
+    std::cin >> operatorSign;
+
+    std::cout << "Please enter a second number" << std::endl;
+    std::cin >> numberTwo;
+
+    float result = 0;
+
+    switch (operatorSign) {
+        case '+':
+            result = numberOne + numberTwo;
+            break;
+        case '-':
+            result = numberOne - numberTwo;
+            break;
+        case '*':
+            result = numberOne * numberTwo;
+            break;
+        case '/':
+            if (numberOne == 0||numberTwo == 0) {
+                std::cout << "Division by zero unable to do that" << std::endl;
+            }else {
+                result = numberOne / numberTwo;
+            }
+            break;
+    }
+
+    std::cout << result << std::endl;
 
     return 0;
 }
